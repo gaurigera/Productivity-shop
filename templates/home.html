@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://pbs.twimg.com/media/FY6QawiWQAAJ9F6.jpg" type="image/x-icon">
+
+<body
+    class="grid font-sans min-h-screen bg-gradient-to-br to-blue-300 via-purple-300 from-blue-400 place-content-center">
+    <div class="bg-blue-400 shadow-orange-100 rounded-xl border-blue-50 border p-5">
+        <div id="Container" class="text-cyan-50 text-3xl m-5">
+            <h1 class="text-4xl">Productivity Shop</h1>
+            <form id="new-task-form">
+                <input type="text" id="new-task-inp" placeholder="Enter a task here"
+                    class="text-ellipsis shadow-slate-50 rounded bg-slate-100 text-slate-600 indent-1 pl-1 pt-4 pr-1 pb-3 my-6 h-auto">
+                <input type="submit" value="Add Task"
+                    class="shadow-white p-2 hover:bg-blue-300 rounded-xl shadow-xl cursor-pointer">
+            </form>
+        </div>
+        <main>
+            <section class="task-list m-5">
+                <h2 class="text-cyan-50 text-3xl">Tasks</h2>
+                <div id="tasks" class="text-cyan-50 text-3xl m-4">
+                    <div class="task">
+                        <!-- <input type="text" id="task-input" class="rounded bg-slate-100 text-slate-600 p-2" style="visibility: hidden;">
+                                <button class="bg-indigo-500 rounded m-4 p-2" id="edit">edit</button>
+                                <button class="bg-emerald-600 rounded m-4 p-2" id="delete" style="visibility: hidden;">edit</button> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+<script type="text/javascript" src="{{ url_for('static', filename='script/scripts.js') }}"></script>
+
+</html>
